@@ -829,8 +829,6 @@ x:-o-prefocus,
 
 #headline:before,
 #headline em.before {
-    margin: 30px;
-    padding: 40px;
     left: 0;
     right: 0;
     content: '';
