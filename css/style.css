@@ -831,13 +831,18 @@ x:-o-prefocus,
 #headline em.before {
     left: 0;
     right: 0;
+    bottom: 0;
+    z-index: 1;
     content: '';
-    height: 100%;
+    height: 380px;
     position: absolute;
+    padding: 40px;
+  
     background: url(../images/Assan\ akerke\ main.png) no-repeat center bottom
 }
 
 #headline .badge {
+    z-index: 1;
     left: 50%;
     width: 652px;
     height: 108px;
@@ -1129,6 +1134,7 @@ x:-o-prefocus,
 }
 
 #location .logo {
+    z-index: 2;
     left: 50%;
     top: 70px;
     opacity: 0;
@@ -1138,26 +1144,8 @@ x:-o-prefocus,
     position: absolute;
     margin-left: -126px;
     background: url('../images/baiterek.png') no-repeat center;
-    -webkit-transform: translateY(-20%);
-    -moz-transform: translateY(-20%);
-    -ms-transform: translateY(-20%);
-    -o-transform: translateY(-20%);
-    transform: translateY(-20%);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease
 }
 
-.visible#location .logo {
-    opacity: 1;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none
-}
 
 #location .logo p {
     margin: 165px 0 0 0
@@ -1459,217 +1447,13 @@ x:-o-prefocus,
     text-transform: uppercase
 }
 
-#wishlist .journey {
-    width: 800px;
-    height: 500px;
-    margin: 0 auto;
-    position: relative;
-    background: url('../images/worldmap.jpg') no-repeat center
-}
-
-#wishlist .journey b {
-    opacity: 0;
-    color: #F09;
-    font-size: 20px;
-    text-align: center;
-    position: absolute;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-    -webkit-transform: translateZ(0);
-    *zoom: expression(runtimeStyle.zoom=1, insertAdjacentHTML('afterBegin', '<em class="before"></em>'), insertAdjacentHTML('beforeEnd', '<em class="after"></em>'))
-}
-
-#wishlist .journey b:before,
-#wishlist .journey b:after,
-#wishlist .journey b em.before,
-#wishlist .journey b em.after {
-    content: '';
-    width: 28px;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: right center;
-    -webkit-transition: all 1.5s ease;
-    -moz-transition: all 1.5s ease;
-    -ms-transition: all 1.5s ease;
-    -o-transition: all 1.5s ease;
-    transition: all 1.5s ease
-}
-
-#wishlist .journey .route0 {
-    top: 90px;
-    left: 430px
-}
-
-#wishlist .journey .route0:after,
-#wishlist .journey .route0 em.after {
-    top: 15px;
-    right: 20px;
-    height: 67px;
-    background-image: url('../images/route0.png')
-}
-
-#wishlist .journey .route1 {
-    top: 180px;
-    left: 250px
-}
-
-#wishlist .journey .route1:after,
-#wishlist .journey .route1 em.after {
-    top: -20px;
-    right: 105px;
-    height: 39px;
-    background-image: url('../images/route1.png')
-}
-
-#wishlist .journey .route2 {
-    top: 155px;
-    left: -50px
-}
-
-#wishlist .journey .route2:after,
-#wishlist .journey .route2 em.after {
-    top: 20px;
-    right: -30px;
-    height: 50px;
-    background-image: url('../images/route2.png')
-}
-
-#wishlist .journey .route3a {
-    top: 220px;
-    left: -25px;
-    padding: 25px 0 0 0;
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAASFBMVEUAAAD/////////////////////////////AJb/EJ3/IKP/MKr/QLD/ULf/YL3/cMT/gMv/j9H/n9j/r97/v+X/3/L/7/j///90fBIJAAAACHRSTlMAMFBggI+/3/g5H/0AAADNSURBVHjafZPbEoQgCEDtYmmaWpn8/5+u5Ca5zXKedM4giCgqvZwgM8le/DLOUJnHRnVFke7IDfBiaN3pjcoYfz5tB4hXFQ9IORnzJaMemIR5rzrJtXbEwHqmiwDpWK6TS2iPtVxuSYAkjRusqheSinFOY4i9Q6XAnj0y6u/OYCcFZG6z2DXCXtaQaWTI603/kTZsJ5zLW1LOQLIURGRJBdFVwu7segA4ugo1IcBFVNQEap/2R4y7U9Q+rvHck7GPzY0JP2D8aPJDzX6HD7aaJafScux9AAAAAElFTkSuQmCC') no-repeat right top
-}
-
-#wishlist .journey .route3 {
-    top: 245px;
-    left: 780px
-}
-
-#wishlist .journey .route3:after,
-#wishlist .journey .route3 em.after {
-    top: -55px;
-    right: 40px;
-    height: 58px;
-    background-image: url('../images/route3.png')
-}
-
-#wishlist .journey .route4 {
-    top: 220px;
-    left: 670px
-}
-
-#wishlist .journey .route4:after,
-#wishlist .journey .route4 em.after {
-    top: -90px;
-    right: 80px;
-    height: 92px;
-    background-image: url('../images/route4.png')
-}
-
-.visible#wishlist .journey b,
-.visible#wishlist .journey b:after,
-.visible#wishlist .journey b em.after {
-    opacity: 1
-}
-
-.visible#wishlist .journey b:after,
-.visible#wishlist .journey b em.after {
-    -webkit-transition-duration: .7s;
-    -moz-transition-duration: .7s;
-    -o-transition-duration: .7s;
-    transition-duration: .7s
-}
-
-.visible#wishlist .journey .route0:after,
-.visible#wishlist .journey .route0 em.after {
-    width: 249px;
-    -webkit-transition-delay: .1s;
-    -moz-transition-delay: .1s;
-    -o-transition-delay: .1s;
-    transition-delay: .1s
-}
-
-.visible#wishlist .journey .route1 {
-    -webkit-transition-delay: .7s;
-    -moz-transition-delay: .7s;
-    -o-transition-delay: .7s;
-    transition-delay: .7s
-}
-
-.visible#wishlist .journey .route1:after,
-.visible#wishlist .journey .route1 em.after {
-    width: 109px;
-    -webkit-transition-delay: .8s;
-    -moz-transition-delay: .8s;
-    -o-transition-delay: .8s;
-    transition-delay: .8s
-}
-
-.visible#wishlist .journey .route2 {
-    -webkit-transition-delay: 1.4s;
-    -moz-transition-delay: 1.4s;
-    -o-transition-delay: 1.4s;
-    transition-delay: 1.4s
-}
-
-.visible#wishlist .journey .route2:after,
-.visible#wishlist .journey .route2 em.after {
-    width: 74px;
-    -webkit-transition-delay: 1.5s;
-    -moz-transition-delay: 1.5s;
-    -o-transition-delay: 1.5s;
-    transition-delay: 1.5s
-}
-
-.visible#wishlist .journey .route3a {
-    -webkit-transition-delay: 2s;
-    -moz-transition-delay: 2s;
-    -o-transition-delay: 2s;
-    transition-delay: 2s
-}
-
-.visible#wishlist .journey .route3 {
-    -webkit-transition-delay: 2.4s;
-    -moz-transition-delay: 2.4s;
-    -o-transition-delay: 2.4s;
-    transition-delay: 2.4s
-}
-
-.visible#wishlist .journey .route3:after,
-.visible#wishlist .journey .route3 em.after {
-    width: 159px;
-    -webkit-transition-delay: 2.5s;
-    -moz-transition-delay: 2.5s;
-    -o-transition-delay: 2.5s;
-    transition-delay: 2.5s
-}
-
-.visible#wishlist .journey .route4 {
-    -webkit-transition-delay: 3s;
-    -moz-transition-delay: 3s;
-    -o-transition-delay: 3s;
-    transition-delay: 3s
-}
-
-.visible#wishlist .journey .route4:after,
-.visible#wishlist .journey .route4 em.after {
-    width: 187px;
-    -webkit-transition-delay: 3.1s;
-    -moz-transition-delay: 3.1s;
-    -o-transition-delay: 3.1s;
-    transition-delay: 3.1s
-}
 
 #wishlist .wrapper {
     padding: 0
 }
 
 #wishlist .cell {
-    width: 288px;
+    width: 100%;
     text-align: center;
     padding-bottom: 4em;
     background-repeat: no-repeat;
@@ -1696,8 +1480,9 @@ x:-o-prefocus,
 
 #wishlist .badge {
     padding: 0;
-    width: 332px;
-    height: 252px;
+    align-items: center;
+    text-align: center;
+    height: 200px;
     background: url('../images/wishlist-badge.png') no-repeat center
 }
 
