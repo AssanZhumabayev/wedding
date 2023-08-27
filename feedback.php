@@ -6,17 +6,17 @@
 
   if (isset($_POST['submit_btn'])) {
     // Email на который будет отправлено письмо
-    $to = "assanzhumabayev@gmail.com";
+    $to = "example@mail.ru";
     // Email от имени которого будет отправлено письмо.
     // Введите email вашего сайта, либо, в крайнем случае,
     // продублируйте email из $to (может не работать)
-    $from = "bossluk@mail.ru";
-    $subject = "Новый ответ на сайте"; // Тема присылаемого письма
+    $from = "example@mail.ru";
+    $subject = "Новая заявка на сайте"; // Тема присылаемого письма
     $message = "На сайте была заполнена форма обратной связи"."\r\n"
       // Если вы изменяли поля формы, внесите изменения ниже
-      ."<b>Ответ</b> ".$_POST['theme']."\r\n"
+      ."<b>Тема:</b> ".$_POST['theme']."\r\n"
       ."<b>Ваше имя:</b> ".$_POST['name']."\r\n"
-      ."<b>Ваш телефон:</b> ".$_POST['phone']."\r\n"
+      ."<b>Ваш email:</b> ".$_POST['email']."\r\n"
       ."<b>Сообщение:</b> ".$_POST['message']."\r\n";
     $headers = "From: ".$from."\r\nContent-type: text/html; charset=utf-8\r\n";
     mail($to, $subject, $message, $headers);
