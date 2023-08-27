@@ -1134,10 +1134,9 @@ x:-o-prefocus,
 }
 
 #location .logo {
-    z-index: 2;
     left: 50%;
     top: 70px;
-    opacity: 0;
+    opacity: 1;
     width: 252px;
     height: 276px;
     text-align: center;
@@ -1171,7 +1170,6 @@ x:-o-prefocus,
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
     content: '';
     height: 100px;
     position: absolute;
@@ -1346,7 +1344,8 @@ x:-o-prefocus,
 }
 
 #schedule .cell {
-    width: 100%
+    width: 100%;
+    text-align: justify;
 }
 
 #schedule h3 {
@@ -1354,7 +1353,7 @@ x:-o-prefocus,
 }
 
 #schedule p {
-    text-align: center
+    text-align: justify
 }
 
 #schedule p span {
@@ -1412,6 +1411,28 @@ x:-o-prefocus,
     vertical-align: middle;
     line-height: 1.2
 }
+
+.guruweba_example_form {
+    width: 290px;
+    left: 35%;
+    height: 500px;
+    opacity: 1;
+    text-align: center;
+    position: relative;
+  }
+  .guruweba_example_caption {
+    font-size: 24px;
+    text-align: center;
+  }
+  .guruweba_example_form .guruweba_example_infofield {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .guruweba_example_form select, .guruweba_example_form input, .guruweba_example_form textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px 15px;
+  }
 
 #wishlist {
     padding: 5em 0;
